@@ -1,5 +1,6 @@
 .idea
 dist
+docs
 # Logs
 logs
 *.log

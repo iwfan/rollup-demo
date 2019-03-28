@@ -6,8 +6,11 @@
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "rollup -c build/rollup.config.prod.js",
-    "start": "rollup -c -w build/rollup.config.dev.js",
+    "build": "npm run build:declare && npm run build:ts && npm run build:docs",
+    "start": "rollup -w -c build/rollup.config.dev.js",
+    "build:declare": "tsc --emitDeclarationOnly",
+    "build:ts": "rollup -c build/rollup.config.prod.js",
+    "build:docs": "typedoc --out docs --target es6 --theme minimal --mode file ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +30,7 @@
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-tslint": "^0.2.2",
-    "rollup-plugin-typescript": "^1.0.1"
+    "rollup-plugin-typescript": "^1.0.1",
+    "typedoc": "^0.14.2"
   }
 }
