@@ -1,0 +1,32 @@
+{
+  "name": "rollup-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c build/rollup.config.prod.js",
+    "start": "rollup -c -w build/rollup.config.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwfan/rollup-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwfan/rollup-demo/issues"
+  },
+  "homepage": "https://github.com/iwfan/rollup-demo#readme",
+  "devDependencies": {
+    "rollup": "^1.7.3",
+    "rollup-plugin-commonjs": "^9.2.2",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-tslint": "^0.2.2",
+    "rollup-plugin-typescript": "^1.0.1"
+  }
+}
