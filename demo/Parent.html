@@ -11,6 +11,9 @@
 </body>
 <script src="../dist/index.umd.js"></script>
 <script>
-    console.log(new SDKServer());
+    const sdk = SDKServer.init({
+        childDomain: '123'
+    })
+    console.log(sdk);
 </script>
 </html>

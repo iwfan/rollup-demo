@@ -4,7 +4,7 @@ import typescript from 'rollup-plugin-typescript';
 import tslint from 'rollup-plugin-tslint';
 import {main, module} from '../package.json';
 
-const name = 'WidgetSDK';
+const name = 'SDKServer';
 
 const extensions = [
     '.js', '.jsx', '.ts', '.tsx',
