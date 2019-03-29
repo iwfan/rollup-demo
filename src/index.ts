@@ -6,6 +6,8 @@ export {
 
 const a = 1;
 
-const fun = {};
+const fun = () => {
+    document.querySelector('h1')!.innerText = 'Test';
+};
 
 export { fun, a };

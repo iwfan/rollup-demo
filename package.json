@@ -27,7 +27,9 @@
   "devDependencies": {
     "rollup": "^1.7.3",
     "rollup-plugin-commonjs": "^9.2.2",
+    "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-tslint": "^0.2.2",
     "rollup-plugin-typescript": "^1.0.1",
