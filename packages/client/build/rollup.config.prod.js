@@ -14,7 +14,7 @@ export default [
             terser(),
         ],
         output: [{
-            file: packageJson.main.replace('.js', '') + '.min.js',
+            file: packageJson.main.replace('.js', '.min.js'),
             name,
             format: 'umd',
             sourcemap: 'inline'

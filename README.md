@@ -1,4 +1,4 @@
-# rollup-demo
+# Widget SDK
 
 # Development
 

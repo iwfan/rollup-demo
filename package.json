@@ -1,38 +1,7 @@
 {
-  "name": "rollup-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/types/index.d.ts",
-  "scripts": {
-    "build": "npm run build:declare && npm run build:ts && npm run build:docs",
-    "start": "rollup -w -c build/rollup.config.dev.js",
-    "build:declare": "tsc --emitDeclarationOnly",
-    "build:ts": "rollup -c build/rollup.config.prod.js",
-    "build:docs": "typedoc --out docs --target es6 --theme minimal --mode file ./src",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iwfan/rollup-demo.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iwfan/rollup-demo/issues"
-  },
-  "homepage": "https://github.com/iwfan/rollup-demo#readme",
+  "name": "root",
+  "private": true,
   "devDependencies": {
-    "rollup": "^1.7.3",
-    "rollup-plugin-commonjs": "^9.2.2",
-    "rollup-plugin-livereload": "^1.0.0",
-    "rollup-plugin-node-resolve": "^4.0.1",
-    "rollup-plugin-serve": "^1.0.1",
-    "rollup-plugin-terser": "^4.0.4",
-    "rollup-plugin-tslint": "^0.2.2",
-    "rollup-plugin-typescript": "^1.0.1",
-    "typedoc": "^0.14.2"
+    "lerna": "^3.13.1"
   }
 }
