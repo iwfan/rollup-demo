@@ -1,5 +1,4 @@
-.idea
-dist
+.intermediate
 docs
 # Logs
 logs
@@ -62,6 +61,3 @@ typings/
 
 # next.js build output
 .next
-
-# demo Page
-page/
