@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Child</title>
+</head>
+<body>
+    123
+</body>
+<script>
+    window.onload = function() {
+        const messageChanel = new MessageChannel();
+        window.parent.postMessage('this is child', 'http://127.0.0.1:5500', [messageChanel.port2]);
+
+        messageChanel.port1.onmessage = function({data, origin, source}) {
+            console.log(data);
+        }
+    }
+</script>
+</html>

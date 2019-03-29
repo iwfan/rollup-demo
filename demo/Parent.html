@@ -7,13 +7,12 @@
     <title>Parent</title>
 </head>
 <body>
-    
+    <iframe src="./Child.html" frameborder="1" width="300px" height="300px"></iframe>
 </body>
 <script src="../dist/index.umd.js"></script>
 <script>
     const sdk = SDKServer.init({
-        childDomain: '123'
+        childDomain: 'http://127.0.0.1:5500'
     })
-    console.log(sdk);
 </script>
 </html>

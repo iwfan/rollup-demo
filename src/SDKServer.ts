@@ -1,5 +1,8 @@
+import ChildPort from './ChildPort';
 class SDKS {
     private childDomain: string;
+    private childPorts: any = {};
+
     constructor(options: any) {
         this.childDomain = options.childDomain;
 
@@ -8,20 +11,22 @@ class SDKS {
 
     public sendMessage(message: any): void {}
 
-    private destroy(): void {
-        this.rejectMessage();
+    private destroy(key: any): void {
+        this.childPorts[key] = null;
     }
 
     private receiveMessage(): void {
-        window.addEventListener('message', this.handleMessage);
+        window.addEventListener('message', (event: any): void => {
+            const {data, origin, source, ports} = event;
+            if (origin === this.childDomain && source !== window) {
+                this.initChildPort(data, ports[0]);
+            }
+        });
     }
-
-    private rejectMessage(): void {
-        window.removeEventListener('message', this.handleMessage);
-    }
-
-    private handleMessage({data, origin, source}: any): void {
-        console.log(data);
+    private initChildPort(key: any, ports: any): void {
+        const port: any = {};
+        port[key] = new ChildPort(ports);
+        this.childPorts = Object.assign(this.childPorts, port);
     }
 }
 
