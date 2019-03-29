@@ -1,11 +1,5 @@
-import Widget from './Widget';
+import SDKServer from './SDKServer';
 
 export {
-    Widget,
+    SDKServer,
 };
-
-const a = 1;
-
-const fun = {};
-
-export { fun, a };
