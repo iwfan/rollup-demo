@@ -9,10 +9,10 @@
 <body>
     123
 </body>
-<script src="../client.umd.js"></script>
+<script src="./node_modules/client/dist/client.umd.js"></script>
 <script>
     const sdk = client.init({
-        parentDomain: 'http://localhost:8080'
+        parentDomain: 'http://127.0.0.1:5500'
     })
     
     sdk.contentInit(() => {
