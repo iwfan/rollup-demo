@@ -6,6 +6,7 @@
     "jsRules": {},
     "rules": {
         "no-empty": false,
+        "no-console": false,
         "quotemark": {
             "options": "single"
         }

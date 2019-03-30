@@ -25,6 +25,7 @@ class SDKS {
     }
     private initChildPort(key: any, ports: any): void {
         const port: any = {};
+        console.log(key);
         port[key] = new ChildPort(ports);
         this.childPorts = Object.assign(this.childPorts, port);
     }

@@ -1,13 +1,7 @@
-import Widget from './Widget';
+import SDKClient from './SDKClient';
 
-export {
-    Widget,
+export default {
+    init(options: any) {
+        return new SDKClient(options);
+    },
 };
-
-const a = 1;
-
-const fun = () => {
-    document.querySelector('h1')!.innerText = 'Test';
-};
-
-export { fun, a };

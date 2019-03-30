@@ -9,14 +9,18 @@
 <body>
     123
 </body>
+<script src="../client.umd.js"></script>
 <script>
-    window.onload = function() {
-        const messageChanel = new MessageChannel();
-        window.parent.postMessage('this is child', 'http://localhost:8080', [messageChanel.port2]);
-
-        messageChanel.port1.onmessage = function({data, origin, source}) {
-            console.log(data);
-        }
-    }
+    const sdk = client.init({
+        parentDomain: 'http://localhost:8080'
+    })
+    
+    sdk.contentInit(() => {
+        console.log('dom is ready');
+    })
+    
+    setTimeout(() => {
+        sdk.sendMessage();
+    }, 2000);
 </script>
 </html>
