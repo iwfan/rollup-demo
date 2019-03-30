@@ -12,6 +12,8 @@ export default {
             open: true,
             openPage: '/index.html'
         }),
-        livereload()
+        livereload({
+            port: 35730
+        })
     ]
 };
