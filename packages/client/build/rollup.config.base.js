@@ -2,9 +2,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import typescript from 'rollup-plugin-typescript';
 import tslint from 'rollup-plugin-tslint';
-import {main, module} from '../package.json';
-
-const name = 'SDKServer';
+import {name, main, module} from '../package.json';
 
 const extensions = [
     '.js', '.jsx', '.ts', '.tsx',

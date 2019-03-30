@@ -1,0 +1,20 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "no-empty": false,
+        "quotemark": {
+            "options": "single"
+        }
+    },
+    "rulesDirectory": [],
+    "linterOptions": {
+        "exclude": [
+            "*.js",
+            "build"
+        ]
+    }
+}
