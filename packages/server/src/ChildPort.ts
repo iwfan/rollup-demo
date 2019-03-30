@@ -6,8 +6,8 @@ class ChildPorts {
         this.sendMessage('parent init');
     }
 
-    sendMessage(message: any): void {
-        this.port.message(message);
+    private sendMessage(message: any): void {
+        this.port.postMessage(message);
     }
 }
 

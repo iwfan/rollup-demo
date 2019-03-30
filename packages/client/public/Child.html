@@ -12,7 +12,7 @@
 <script>
     window.onload = function() {
         const messageChanel = new MessageChannel();
-        window.parent.postMessage('this is child', 'http://127.0.0.1:5500', [messageChanel.port2]);
+        window.parent.postMessage('this is child', 'http://localhost:8080', [messageChanel.port2]);
 
         messageChanel.port1.onmessage = function({data, origin, source}) {
             console.log(data);

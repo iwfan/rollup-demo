@@ -7,12 +7,12 @@
     <title>Parent</title>
 </head>
 <body>
-    <iframe src="http://127.0.0.1:5500/packages/client/public/child.html" frameborder="1" width="300px" height="300px"></iframe>
+    <iframe src="http://localhost:8081/Child.html" frameborder="1" width="300px" height="300px"></iframe>
 </body>
-<script src="../dist/server.umd.js"></script>
+<script src="../server.umd.js"></script>
 <script>
     const sdk = server.init({
-        childDomain: 'http://127.0.0.1:5500'
+        childDomain: 'http://localhost:8081'
     })
 </script>
 </html>

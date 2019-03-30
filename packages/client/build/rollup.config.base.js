@@ -15,7 +15,7 @@ export default {
         commonjs(),
         typescript(),
         tslint({
-            throwOnError: true,
+            throwOnError: false,
         })
     ],
     output: [
